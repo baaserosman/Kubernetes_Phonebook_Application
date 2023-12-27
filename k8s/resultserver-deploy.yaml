@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: resultserver-deploy
+  name: resultserver-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resultserver-deploy
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: resultserver-deploy
+    spec:
+      containers:
+      - image: baaserosman/resultserver
+        name: resultserver
+        ports:
+        - containerPort: 80
+        envFrom:
+          - secretRef:
+              name: mysql-secret
+          - configMapRef:
+              name: server-config          
+        resources: {}

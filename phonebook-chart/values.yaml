@@ -1,0 +1,2 @@
+webserver_image: baaserosman/webserver
+resultserver_image: baaserosman/resultserver
