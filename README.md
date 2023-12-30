@@ -99,7 +99,7 @@ Phonebook Microservice Web Application aims to create a web application with MyS
 ## Project Skeleton
 
 ```text
-206-Kubernetes-Microservice-Phonebook (folder)
+Kubernetes-Microservice-Phonebook (folder)
 
 Initial files:
 
